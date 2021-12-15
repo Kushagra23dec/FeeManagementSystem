@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.fms.dao.FeeDao;
+
 /**
  * Servlet implementation class GetStudentDetails
  */
@@ -35,10 +37,28 @@ public class GetStudentDetails extends HttpServlet {
 		String rollno =   request.getParameter("rollno");
 		HttpSession session = request.getSession();
 	
-		if(fullname.isEmpty() == true && rollno.isEmpty() == true) {
-			response.sendRedirect("dashboard.jsp?IncorrectStudentDetials");
+		try {
+			if(fullname.isEmpty() == true && rollno.isEmpty() == true) {
+				response.sendRedirect("dashboard.jsp?IncorrectStudentDetials");
+				return;
+			}	
 		}
-		response.sendRedirect("studentdetails.jsp?"+fullname);
+		catch(Exception e) {
+			return;
+		}
+		
+		
+		
+		FeeDao fdao = new FeeDao();
+		
+		session.setAttribute("getstudentdetail", fdao.getStudentsDetail());
+		
+		if(session.getAttribute("userd") == null) {
+			response.sendRedirect("index.jsp?LoginFirst");
+		}else {
+			response.sendRedirect("studentdetails.jsp?"+fullname);
+				
+		}
 		
 		
 	

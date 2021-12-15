@@ -8,14 +8,14 @@
 </head>
 <body>
 
-<center><h1>Login Page</h1></center>
+<center><h1>Login Page</h1>
  
 <form action="Validation" method="post">
 <input placeholder="UserName" name="user"> <br><br>
 <input placeholder="Password" name="pass"> <br><br>
 <input type="submit" value="Login">
 </form>
- 
+ </center>
 
 </body>
 </html>

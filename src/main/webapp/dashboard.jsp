@@ -33,6 +33,7 @@ try{
 <title>Insert title here</title>
 </head>
 <body>
+<center>
 <% try{
 	out.print("hello: "+ request.getParameter("k") + " Name: " + us.get(1) 	);	
 	
@@ -42,5 +43,6 @@ try{
  %>
 <h3><a href="logout.jsp">Logout</a></h3>
 <label>See Student Details: </label> <button><a href="student.jsp">Student Search</a></button> 
+</center>
 </body>
 </html>
