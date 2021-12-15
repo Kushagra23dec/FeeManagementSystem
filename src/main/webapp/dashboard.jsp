@@ -31,18 +31,19 @@ try{
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<link rel="stylesheet" href="assets/styles.css"/>
 </head>
 <body>
-<center>
+
 <% try{
-	out.print("hello: "+ request.getParameter("k") + " Name: " + us.get(1) 	);	
+	//out.print("hello: "+ request.getParameter("k") + " Name: " + us.get(1) 	);	
 	
 }catch(Exception e){
 	response.sendRedirect("index.jsp?FromException");
 }
  %>
-<h3><a href="logout.jsp">Logout</a></h3>
-<label>See Student Details: </label> <button><a href="student.jsp">Student Search</a></button> 
-</center>
+<button class="login-btn space"><a href="logout.jsp">Logout</a></button>
+ <button class="login-btn space"><a href="student.jsp">Student Search</a></button> 
+
 </body>
 </html>

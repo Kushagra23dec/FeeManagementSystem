@@ -22,10 +22,14 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Student Details</title>
+<link rel="stylesheet" href="assets/styles.css"/>
 </head>
-<body><center> <h1>Student Details</h1> </center>
+<body> 
 
-<table border="1" >
+<div class="container">
+<h1>Student Details</h1> 
+<div class="data">
+<table  >
 <thead>
 <tr>
 <th>RollNo</th>
@@ -56,9 +60,9 @@
 <% } } catch(Exception e) {  out.print("<center><h1> 404 Not found </h1></center>"); return;} %>
 </tbody>
 </table>
-<br>
-<br>
-<label> dashboard : </label> <button><a href="dashboard.jsp">Dashboard</a></button> 
-<label> Logout :  </label> <button><a href="logout.jsp">Logout</a></button>
+</div>
+ <button class="login-btn space"><a href="dashboard.jsp">Dashboard</a></button> 
+ <button class="login-btn space"><a href="logout.jsp">Logout</a></button>
+</div>
 </body>
 </html>

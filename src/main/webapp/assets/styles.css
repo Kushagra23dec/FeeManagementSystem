@@ -1,0 +1,107 @@
+@charset "ISO-8859-1";
+
+body{
+	margin:0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: hsl(0,0%,90%);
+	font-family: arial;
+}
+
+.container{
+	text-align: center;
+	border: 1px solid hsl(0,0%,70%);
+	padding: 3rem;
+	border-radius: .3em;
+	box-shadow: 0 0 8px 0 hsl(270,50%,80%);
+	/*width: 400px;
+	max-width: 100%;
+	*/
+}
+
+h1{
+	color: hsl(270,50%,60%);
+}
+
+.form{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	
+	/*border: 1px solid red;*/
+}
+
+input[type="text"],input[type="password"]{
+	padding: .5em 1em;
+	border: 1px solid hsl(270,50%,60%);
+	outline: none;
+	border-radius: .3em;
+	font-size: inherit;
+	margin: 1rem 0;
+}
+
+input[type="text"]:hover,
+input[type="password"]:hover,
+input[type="text"]:focus,
+input[type="password"]:focus
+{
+	box-shadow:  0 0 5px 0 hsl(270,50%,40%);
+}
+
+.login-btn{
+	background-color: hsl(270,50%,60%);
+	border: 1px solid hsl(270,50%,40%);
+	outline:none;
+	border-radius: .3em;
+	cursor: pointer;
+	padding: .5em 1em;
+	font-size: inherit;
+	margin: 1rem 0;
+	color: white;
+}
+
+.login-btn:hover,.login-btn:focus{
+	background-color: hsl(270,50%,50%);
+	box-shadow: 0 0 5px 0 hsl(270,50%,40%);
+}
+
+a{
+	color: white;
+	text-decoration: none;
+}
+
+
+.data{
+	height: 250px;
+	overflow: auto;
+}
+
+
+table,thead,tr,th,td,tbody{
+	border: 1px solid hsl(270,50%,40%);
+	border-collapse: collapse;
+	padding: 1rem;
+}
+
+thead{
+	color: hsl(270,50%,40%)
+}
+
+.space{
+	margin-right: 1rem;
+}
+.space:last-of-type{
+	margin-right: 0;
+}
+
+
+
+
+
+
+
+
+
+

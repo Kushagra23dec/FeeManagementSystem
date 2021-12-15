@@ -17,16 +17,19 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<link rel="stylesheet" href="assets/styles.css"/>
 </head>
 <body>
 
-<center>
-<form action="GetStudentDetails" method="post">
-<input placeholder="Full Name" name="fullname"> <br><br>
-<input placeholder="Roll No" name="rollno"> <br><br>
-<input type="submit" value="search">
+<div class="container">
+
+<form  class="form" action="GetStudentDetails" method="post">
+<input type="text" placeholder="Full Name" name="fullname"> 
+<input type="text" placeholder="Roll No" name="rollno"> 
+<input class="login-btn" type="submit" value="search">
 </form>
-</center>
+
+</div>
 
 </body>
 </html>
