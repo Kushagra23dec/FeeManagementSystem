@@ -12,6 +12,7 @@ import com.fms.dto.FeeDto;
  
 
 public class FeeDao {
+private int a;
 
 	public FeeDao() {
 		
@@ -27,7 +28,7 @@ public class FeeDao {
 	}
 	
 	
-	public List<FeeDto> getStudentsDetail() {
+	public List<FeeDto> getStudentsDetail(String name,int rollno) {
 		
 		 
 		
@@ -51,9 +52,10 @@ public class FeeDao {
 		     
 		     String sql = "SELECT * FROM student;";
 			ResultSet rs = stmt.executeQuery(sql);
+			 
 			while(rs.next()) {
 				FeeDto u = new FeeDto();
-				
+				System.out.println("Testing Name: "+name);
    			//System.out.println("id: "+rs.getString(1)+" Name: "+rs.getString(2));
 				 u.setRollno(Integer.parseInt(rs.getString("rollno")));
 				 u.setsName(rs.getString("name"));
@@ -63,8 +65,16 @@ public class FeeDao {
 				 u.setTotalFee(Integer.parseInt(rs.getString("totalfee")));
 				 u.setPaidFee(Integer.parseInt(rs.getString("paidfee")));
 				 u.setDueFee(Integer.parseInt(rs.getString("duefee")));
-			
-				 fobj.add(u);
+			if(u.getRollno() == rollno && u.getsName().equals(name) == true ) {
+				
+				a = 1;
+				fobj.add(u);
+				break;
+			 
+				 
+			}
+			 
+				 
 			} 
 				
 			
@@ -100,13 +110,20 @@ public class FeeDao {
 		 
  		
  		fobj = null;
-
+ 		a = 0 ;
 		return fobj;
 	
 	
  
 	
 	}
+	
+	
+	public int getA() {
+		return a;
+	}
+	
+	
 	
 	
 }

@@ -47,7 +47,7 @@ public class Validation extends HttpServlet {
 				
 				session.setAttribute("userd",l);
 				
-				response.sendRedirect("dashboard.jsp?k=Kushagra");
+				response.sendRedirect("dashboard.jsp?Admin");
 			}
 			else {
 				response.sendRedirect("index.jsp?InvalidUserandPass");

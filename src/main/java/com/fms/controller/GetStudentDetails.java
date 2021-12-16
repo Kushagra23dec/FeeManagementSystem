@@ -51,11 +51,18 @@ public class GetStudentDetails extends HttpServlet {
 		
 		FeeDao fdao = new FeeDao();
 		
-		session.setAttribute("getstudentdetail", fdao.getStudentsDetail());
+		session.setAttribute("getstudentdetail", fdao.getStudentsDetail(fullname,Integer.parseInt(rollno)));
 		
 		if(session.getAttribute("userd") == null) {
 			response.sendRedirect("index.jsp?LoginFirst");
-		}else {
+		}
+		else if(fdao.getA() == 0){
+			response.sendRedirect("dashboard.jsp?NoRecordFound");
+			session.removeAttribute("getstudentdetail");
+		}
+			else
+		
+		{
 			response.sendRedirect("studentdetails.jsp?"+fullname);
 				
 		}

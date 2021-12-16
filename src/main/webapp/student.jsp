@@ -24,8 +24,8 @@
 <div class="container">
 
 <form  class="form" action="GetStudentDetails" method="post">
-<input type="text" placeholder="Full Name" name="fullname"> 
-<input type="text" placeholder="Roll No" name="rollno"> 
+<input type="text" placeholder="Full Name" name="fullname"  required> 
+<input type="text" placeholder="Roll No" name="rollno"  required> 
 <input class="login-btn" type="submit" value="search">
 </form>
 

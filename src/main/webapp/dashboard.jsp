@@ -15,9 +15,13 @@
 
 List<String> us = null;
 try{
+	if(session.getAttribute("userd") == null){
+		response.sendRedirect("index.jsp?LoginFirst");
+	}
 	us = (List<String>) session.getAttribute("userd");
+	
 }catch(Exception e){
-	response.sendRedirect("index.jsp");
+	response.sendRedirect("index.jsp?Exception");
 }
 %>
 

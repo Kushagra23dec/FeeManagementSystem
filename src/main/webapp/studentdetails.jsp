@@ -55,7 +55,7 @@
 <td><%= fd.getPaidFee() %></td>
 <td><%= fd.getDueFee() %></td>
 
-</tr>
+</tr>  
 
 <% } } catch(Exception e) {  out.print("<center><h1> 404 Not found </h1></center>"); return;} %>
 </tbody>
@@ -63,6 +63,12 @@
 </div>
  <button class="login-btn space"><a href="dashboard.jsp">Dashboard</a></button> 
  <button class="login-btn space"><a href="logout.jsp">Logout</a></button>
+ 
+ <form class="form" action="FeeSubmition">
+ <input type="number" placeholder="Enter Amount" name="feeamount"  required> 
+ <input class="login-btn" type="submit" value="PayFee">
+</form>
+
 </div>
 </body>
 </html>

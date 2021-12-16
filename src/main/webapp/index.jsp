@@ -15,8 +15,8 @@
  
 <form  class="form" action="Validation" method="post">
 
-<input type="text" placeholder="UserName" name="user"> 
-<input type="password" placeholder="Password" name="pass"> 
+<input type="text" placeholder="UserName" name="user"  required> 
+<input type="password" placeholder="Password" name="pass"  required> 
 <input class="login-btn" type="submit" value="Login">
 </form>
 </div>
